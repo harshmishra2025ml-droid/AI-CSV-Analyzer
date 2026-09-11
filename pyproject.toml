@@ -2,7 +2,11 @@
 name = "ai-csv-analyzer"
 version = "1.0.0"
 description = "AI-powered CSV data analyzer"
-requires-python = ">=3.12,<3.14"
+requires-python = "==3.12.*"
 
 [tool.fastapi]
 entrypoint = "backend.main:app"
+
+[tool.setuptools.packages.find]
+include = ["backend*"]
+exclude = ["frontend*", "sample_data*"]
