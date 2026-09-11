@@ -4,6 +4,20 @@ version = "1.0.0"
 description = "AI-powered CSV data analyzer"
 requires-python = "==3.12.*"
 
+dependencies = [
+    "fastapi[standard]==0.116.1",
+    "uvicorn[standard]==0.35.0",
+    "python-multipart==0.0.20",
+    "pandas==2.3.2",
+    "numpy==2.3.2",
+    "scipy==1.16.1",
+    "scikit-learn==1.7.1",
+    "openai>=1.99.0",
+    "python-dotenv==1.1.1",
+    "plotly==6.3.0",
+    "requests==2.32.5",
+]
+
 [tool.fastapi]
 entrypoint = "backend.main:app"
 
