@@ -24,8 +24,7 @@ border-radius:8px;margin:.45rem 0}
 
 st.markdown('<div class="hero"><h1>📊 AI CSV Analyzer</h1><p>Profile your data, find quality issues, detect anomalies, and get AI-powered explanations.</p></div>', unsafe_allow_html=True)
 
-BACKEND = os.getenv("BACKEND_URL", "http://localhost:8000")
-
+BACKEND = st.secrets["https://ai-csv-analyzer-ffb26fee.fastapicloud.dev/"]
 with st.sidebar:
     st.markdown("## ⚙️ Workspace")
     uploaded = st.file_uploader("Upload CSV", type=["csv"])
